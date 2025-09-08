@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../style/post.css";
-type postProp = {
+export type postProp = {
+  id?:number;
   username: string;
   img: string;
   description: string;
