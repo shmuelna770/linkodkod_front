@@ -1,0 +1,48 @@
+.mainSingup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.singup {
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    background-color: rgba(240, 248, 255, 0.077);
+    height: 450px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(15, 4, 4, 0.1);
+    border: 1px solid black;
+    padding: 0;
+}
+p{
+    font-size: 20px;
+}
+.singInput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+    height: 25px;
+    width: 220px;
+
+}
+.singBtn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #3b96e19a;
+    height: 50px;
+    width: 220px;
+    color: aliceblue;
+    margin-left: 13.5%;
+}
+
+.singBtn:hover{
+  color: black;
+  background-color: #3b96e129;
+}

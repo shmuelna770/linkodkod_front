@@ -1,12 +1,12 @@
-
+import "../style/singlePost.css"
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 import Post, { type postProp } from "../copms/Post";
 
 export default function SinglePost() {
-  const { id } = useParams(); 
-  const [post, setPost] = useState<postProp | null>(null);
-  const [error, setError] = useState("");
+    const { id } = useParams(); 
+    const [post, setPost] = useState<postProp | null>(null);
+    const [error, setError] = useState("");
 
   useEffect(() => {
     const fetchPost = async () => {
@@ -28,7 +28,7 @@ export default function SinglePost() {
 
   return (
     <div className="singlePost">
-      <Post
+      <Post 
         img={post.img}
         description={post.description}
         like={post.like}

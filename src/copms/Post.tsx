@@ -10,7 +10,7 @@ export type postProp = {
 };
 export default function Post(prop: postProp) {
   const [like, setLike] = useState(0);
-  const time = new Date().toLocaleString();
+  const time1 = new Date().toLocaleString();
 
   const hendleLike =async (e:React.FormEvent) => {
     e.preventDefault();
@@ -30,7 +30,7 @@ export default function Post(prop: postProp) {
         Like👍{like}
       </button>
       <p id="disciption">{prop.description}</p>
-      <p id="time">{time}</p>
+      <p id="time">{time1}</p>
     </div>
   );
 }
