@@ -12,7 +12,6 @@
     /* transition: transform 0.2s, box-shadow 0.2s; */
     border: 1px solid black;
     padding: 0;
-
 }
 
 #username {
@@ -51,6 +50,7 @@
 }
 #time {
     font-size: 15px;
+    color: black;
 }
 #disciption {
     height: 30%;

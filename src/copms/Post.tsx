@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "../style/post.css";
 export type postProp = {
   id?:number;
@@ -10,10 +10,13 @@ export type postProp = {
 };
 export default function Post(prop: postProp) {
   const [like, setLike] = useState(0);
-  let time = new Date().toLocaleString();
+  const time = new Date().toLocaleString();
 
-  const hendleLike = () => {
+  const hendleLike =async (e:React.FormEvent) => {
+    e.preventDefault();
     setLike(like + 1);
+
+    
   };
 
   return (

@@ -15,7 +15,9 @@ body, html {
   font-family: Arial, sans-serif;
 }
 
-
+.postLink {
+  text-decoration: none;
+}
 .classPost {
   display: flex;
   flex-wrap: wrap;
@@ -24,22 +26,8 @@ body, html {
 }
 
 
-/* .post:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-} */
-/* img {
-  height: 50%;
-  width: 50%;
-  object-fit: cover;
-} */
-/* #username {
-  margin-top: 0;
-  font-weight: bold;
-  font-size: 20px;
-} */
 
-/* .description {
-  color: gray;
-} */
+
+
+
 
