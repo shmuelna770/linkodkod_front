@@ -15,13 +15,11 @@ export default function Post(prop: postProp) {
   const hendleLike =async (e:React.FormEvent) => {
     e.preventDefault();
     setLike(like + 1);
-
-    
   };
 
   return (
     <div className="post">
-      {/* <h2>post</h2> */}
+      {/* {prop.id} */}
       <div id="headerPost">
         <p id="username">{prop.username}</p>
       </div>

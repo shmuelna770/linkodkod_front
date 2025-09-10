@@ -1,0 +1,31 @@
+.vavBar2 {
+    display: flex;
+    align-items: center;
+    background: rgba(43, 127, 216, 0.785);
+    width: 100%;
+    height: 50px;
+    margin-top: -17px;
+
+}
+#nav {
+    font-size: 16px;
+    margin-top: -1px;
+    
+}
+
+.link1 {
+  text-decoration: none;
+  height: 25px;
+  width: 90px;
+  text-align: center;
+  background-color:#1459e1 ;
+  color: aliceblue;
+  border-radius: 10px;
+  margin-left: 15px;
+  padding-top: 7px;
+  
+}
+.link1:hover{
+  color: black;
+  background-color: #022949b5;
+}

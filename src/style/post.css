@@ -56,4 +56,10 @@
     height: 30%;
     text-align: center;
     color:black;
+    font-size: 15px;
+    
+}
+ .truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

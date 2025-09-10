@@ -14,7 +14,7 @@ export default function SingUp() {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:3041/players/player", {
+      const response = await fetch("http://localhost:3770/user/add", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username: username, password }),
@@ -27,7 +27,7 @@ export default function SingUp() {
         return;
       }
 
-      navigate("/");
+      navigate("/home");
     } catch (err) {
       setError("server faild");
     }

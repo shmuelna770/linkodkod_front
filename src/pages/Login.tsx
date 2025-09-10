@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 import "../style/login.css";
 
 export default function Login() {
@@ -13,18 +13,21 @@ export default function Login() {
     setError("");
 
     try {
-      const respon = await fetch("http://localhost:3770/login", {
+      const response = await fetch("http://localhost:3770/user", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username: name, password }),
       });
-      const data = await respon.json();
-      if (!respon.ok || data.success) {
+
+      const data = await response.json();
+      if (!response.ok || !data.success) {
         setError(data.message);
         return;
       }
+
+      navigate("/home");
     } catch (err) {
-      setError("server error");
+      setError("server faild");
     }
   };
 
@@ -51,6 +54,9 @@ export default function Login() {
             login
           </button>
         </form>
+        <Link className="singLink" to="/singUp">
+          singUp
+        </Link>
         {error && <p>{error}</p>}
       </div>
     </div>

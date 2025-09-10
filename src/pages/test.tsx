@@ -1,20 +1,19 @@
-import "../style/singlePost.css"
+import "../style/singlePost.css";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import Post, { type postProp } from "../copms/Post";
-import Secondnav from "../copms/Secondnav";
 
 export default function SinglePost() {
-    const { id } = useParams(); 
-    const [post, setPost] = useState<postProp | null>(null);
-    const [error, setError] = useState("");
+  const { id } = useParams();
+  const [post, setPost] = useState<postProp | null>(null);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const res = await fetch(`http://localhost:3770/home/single/${id}`);
+        const res = await fetch(`http://localhost:3770/posts/${id}`);
         if (!res.ok) throw new Error("post not found");
-        
+
         const data = await res.json();
         setPost(data.post);
       } catch (err) {
@@ -29,15 +28,15 @@ export default function SinglePost() {
 
   return (
     <div className="singlePost">
-        <Secondnav/>
-      <Post 
-        // id={post.id}
+      <Post
+        id={post.id}
         img={post.img}
         description={post.description}
         like={post.like}
         username={post.username}
         time={post.time}
       />
+      <Link to="/" className="backBtn">⬅ Back</Link>
     </div>
   );
 }
